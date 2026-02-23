@@ -1,11 +1,20 @@
-import AuthContainer from "./components/AuthContainer";
+const Dashboard = ({ setIsAuthenticated }) => {
 
-function App() {
-  return (
-    <div>
-      <AuthContainer />
-    </div>
-  );
-}
-
-export default App;
+    const handleLogout = () => {
+      setIsAuthenticated(false);
+    };
+  
+    return (
+      <div>
+        <h2>Dashboard</h2>
+        <h3>Welcome </h3>
+  
+        <button onClick={handleLogout}>
+          Logout
+        </button>
+      </div>
+    );
+  };
+  
+  export default Dashboard;
+  
